@@ -29,13 +29,12 @@ git clone https://github.com/gitprogamforvenom/xss-project-.git
 cd xss-project-
 
 
-2️⃣ Move the Project to XAMPP Folder
+2️⃣ Move the Project to XAMPP Folder(demo)
 Copy or move the cloned folder to:
 
 makefile
-Copy
-Edit
-C:\xampp\htdocs\xss-project-
+
+C:\xampp\htdocs\demo
 
 3️⃣ Start XAMPP Services
 Open XAMPP Control Panel.
@@ -45,18 +44,16 @@ MySQL (If using a database)
 🌐 Running the Web Page
 Open your web browser.
 Enter the following URL:
-perl
-Copy
-Edit
-http://localhost/xss-project-/index.php
+
+http://localhost/demo/index.php
+
+
 🗃️ Database Setup (If Applicable)
 If your project requires a MySQL database, follow these steps:
 
 
 1️⃣ Open phpMyAdmin
 Go to:
-
-arduino
 
 http://localhost/phpmyadmin
 2️⃣ Create a New Database
@@ -65,7 +62,7 @@ Enter the database name (e.g., xss_example).
 Click Create.
 
 3️⃣ Configure Database Connection
-Update config.php with the following:
+Update db_connect with the following:
 
 <?php
 $servername = "localhost";
