@@ -25,15 +25,15 @@ Ensure you have the following installed:
 
 ### 1️⃣ Clone the Repository
 ```sh
-git clone https://github.com/your-username/my-php-website.git
-cd my-php-website
+git clone https://github.com/gitprogamforvenom/xss-project-.git
+cd xss-project-
 2️⃣ Move the Project to XAMPP Folder
 Copy or move the cloned folder to:
 
 makefile
 Copy
 Edit
-C:\xampp\htdocs\my-php-website
+C:\xampp\htdocs\xss-project-
 3️⃣ Start XAMPP Services
 Open XAMPP Control Panel.
 Start the following services:
@@ -45,7 +45,7 @@ Enter the following URL:
 perl
 Copy
 Edit
-http://localhost/my-php-website/index.php
+http://localhost/xss-project-/index.php
 🗃️ Database Setup (If Applicable)
 If your project requires a MySQL database, follow these steps:
 
@@ -53,37 +53,36 @@ If your project requires a MySQL database, follow these steps:
 Go to:
 
 arduino
-Copy
-Edit
+
 http://localhost/phpmyadmin
 2️⃣ Create a New Database
 Click Databases.
-Enter the database name (e.g., my_database).
+Enter the database name (e.g., xss_example).
 Click Create.
 3️⃣ Configure Database Connection
 Update config.php with the following:
 
-php
-Copy
-Edit
 <?php
 $servername = "localhost";
 $username = "root";
 $password = "";
-$database = "my_database";
+$database = "xss_example";
 
-$conn = mysqli_connect($servername, $username, $password, $database);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $database);
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+echo "Connected successfully";
 ?>
+
 🔄 Pushing Updates to GitHub
 After making changes, push updates to GitHub:
 
 sh
-Copy
-Edit
+
 git add .
 git commit -m "Updated PHP Web Page"
 git push origin main
@@ -94,9 +93,8 @@ Use phpinfo(); inside a PHP file to check PHP settings.
 🎉 Enjoy Coding!
 If you have any questions, feel free to reach out!
 
-yaml
-Copy
-Edit
+
+
 
 ---
 
